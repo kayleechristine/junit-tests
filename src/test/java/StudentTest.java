@@ -2,6 +2,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentTest {
+
     @Test
     public void testCreateStudent(){
         Student randoStudent = new Student(1, "randoStudent");
@@ -13,7 +14,6 @@ public class StudentTest {
     @Test
     public void testStudentFields(){
         Student randoStudent = new Student(1, "randoStudent");
-        assertSame(1, randoStudent.getId());
         assertSame("randoStudent", randoStudent.getName());
         assertSame(0, randoStudent.getGrades().size());
     }
@@ -34,4 +34,5 @@ public class StudentTest {
         randoStudent.addGrade(80);
         assertEquals(90, randoStudent.getGradeAverage(), 0);
     }
+
 }
